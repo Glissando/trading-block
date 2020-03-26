@@ -1,0 +1,1 @@
+This a webapp developed to analyze financial data from IEXcloud using React.js.

@@ -1,0 +1,279 @@
+$light-shade: #21e6c1;
+$light-shade2: #278ea5;
+$dark-shade: #1f4287;
+$dark-shade2: #071e3d;
+
+$navbar-padding: 10px;
+$mobile-width: 600px;
+
+.App {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.Nav-element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(2px + 2vmin);
+    width: 100%;
+}
+
+.Nav-element:hover {
+    border-bottom: 3px solid $light-shade;
+}
+
+#Active {
+    border-bottom: 3px solid $light-shade;
+}
+
+@media only screen and (min-width: $mobile-width) {
+    .Navbar {
+        display: flex;
+        flex-direction: column;
+        padding: $navbar-padding;
+        margin-right: auto;
+        background-color: $dark-shade;
+        width: 20%;
+        height: 10%;
+        bottom: 0;
+        transition: width 200ms ease;
+    }
+
+    .Navbar:hover {
+        width: 22%;
+    }
+
+    .Nav-icon {
+        padding: 0;
+        margin: 0;
+        font-size: calc(10px + 3vh);
+        text-align: center;
+        color: $light-shade;
+        text-decoration: none;
+        transition: 100ms;
+    }
+
+    .Nav-text {
+        margin-left: 5px;
+    }
+
+    .Title {
+        flex: 1 0 auto;
+        background-color: $dark-shade2;
+        width: 100%;
+        padding-left: $navbar-padding;
+    }
+}
+
+.App-header {
+    margin: 0;
+    padding: 0;
+    background-color: $light-shade;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-Body {
+    margin: 0;
+    padding: 0;
+    flex: 3;
+    background-color: $light-shade;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.Section h2 {
+    color: $dark-shade;
+    border-bottom: 3px solid $light-shade2;
+    border-radius: 5px;
+    padding: 1vh;
+    margin: 1vw;
+    height: 100%;
+}
+
+.Section a {
+    color: $light-shade;
+    height: 1000%;
+}
+
+.Section a h2 {
+    color: $dark-shade;
+}
+
+.Section a h2:visited {
+    color: $light-shade2;
+}
+
+@media only screen and (max-width: $mobile-width) {
+    .App-header {
+        background-color: $light-shade;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+        color: white;
+    }
+
+    .App-Body {
+        margin: 0;
+        padding: 0;
+        flex: 5;
+        background-color: $light-shade;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .Navbar {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        background-color: $dark-shade;
+        width: 100vw;
+        height: 10vh;
+    }
+    
+    .Navbar:hover {
+        width: 100vw;
+    }
+
+    .Nav-element {
+        padding: 0;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin: 0;
+        margin-right: 8%;
+        display: inline-block;
+        font-size: calc(2px + 2vmin);
+        flex: 1;
+        text-align: center;
+    }
+
+    .Nav-element:hover {
+        border-bottom: 3px solid $light-shade;
+    }
+    
+    .Nav-icon {
+        padding: 0;
+        margin: 0;
+        margin-top: 0.5vh;
+        font-size: 9vh;
+        color: $light-shade;
+        text-align: center;
+    }
+
+    #Active {
+        background-color: $dark-shade2;
+    }
+
+    .Nav-text {
+        overflow: hidden;
+        visibility: hidden;
+    }
+    
+    .Title {
+        visibility: hidden;
+        overflow: hidden;
+    }
+}
+
+.Section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 5;
+    color: white;
+    margin: calc(20px + 3vh);
+    font-size: calc(8px + 1vh);
+}
+
+.Searchbar {
+    display: block;
+    float: top;
+    width: 50%;
+    flex: 1;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+:root {
+    scrollbar-color: rgb(210,210,210) rgb(46,54,69) !important;
+    scrollbar-width: thin !important;
+}
+  
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+}
+
+footer {
+    height: 50px;
+    //@include set-background($dark-shade2);
+    background-color: $dark-shade2;
+
+}
+
+a {
+    color: $light-shade;
+}
+
+a:visited {
+    color: $light-shade2;
+}
+
+footer a {
+    display: block;
+    padding: 10px;
+    color: $light-shade;
+}
+
+footer a:visited {
+    color: $light-shade; 
+}
+
+footer a:hover {
+    color: $light-shade2;
+}
+
+//Mixins
+
+@function set-text-color($color) {
+    @if(lightness($color) < 70) {
+        @return $dark-shade;
+    } @else {
+        @return $light-shade;
+    }
+}
+
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
