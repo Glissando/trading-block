@@ -16,7 +16,7 @@ export default function Navbar(props) {
             <NavElement name="Fintech" className="Title"></NavElement>
             { 
                 props && props.elements.map((element, index) => (
-                <NavElement key={ index } active={ currentIndex === index ? "Active" : "Inactive" }
+                <NavElement key={ element.name } active={ currentIndex === index ? "Active" : "Inactive" }
                 name={ element.name } icon={ element.icon } onClick={ onClick } index={ index }></NavElement>
             ))}
         </div>
