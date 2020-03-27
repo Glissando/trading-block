@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
   height: 100%;
   width: 100%;
 }
@@ -28,6 +28,11 @@
 
 #Active {
   border-bottom: 3px solid #21e6c1;
+}
+
+.Error {
+  color: red;
+  font-size: 0.75rem;
 }
 
 @media only screen and (min-width: 600px) {
@@ -290,6 +295,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 footer {
+  text-align: center;
   height: 50px;
   background-color: #071e3d;
 }
