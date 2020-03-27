@@ -8,9 +8,9 @@ export default function NavElement(props) {
     }
 
     return(
-        <div className={props.className ? props.className:"Nav-element"} id={ props.active }onClick={ handleClick }>
-            { props.icon && <FontAwesomeIcon className="Nav-icon" icon={ props.icon } color="green" /> }
-            <h1 className="Nav-text">{ props.name }</h1>
+        <div className={props.className ? props.className:"Nav-element"} id={props.active}onClick={handleClick}>
+            { props.icon && <FontAwesomeIcon className="Nav-icon" icon={props.icon} color="green" /> }
+            <h1 className="Nav-text">{props.name}</h1>
         </div>
     );
 }
