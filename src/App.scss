@@ -7,7 +7,7 @@ $navbar-padding: 10px;
 $mobile-width: 600px;
 
 .App {
-    text-align: center;
+    text-align: left;
     height: 100%;
     width: 100%;
 }
@@ -27,6 +27,11 @@ $mobile-width: 600px;
 
 #Active {
     border-bottom: 3px solid $light-shade;
+}
+
+.Error {
+    color: red;
+    font-size: 0.75rem;
 }
 
 @media only screen and (min-width: $mobile-width) {
@@ -107,6 +112,7 @@ $mobile-width: 600px;
 }
 
 .Section a {
+    
     color: $light-shade;
     height: 1000%;
 }
@@ -236,6 +242,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 footer {
+    text-align: center;
     height: 50px;
     //@include set-background($dark-shade2);
     background-color: $dark-shade2;
